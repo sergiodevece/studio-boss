@@ -4,6 +4,10 @@
 
 El proyecto ha sido refactorizado para pasar de una aplicación de archivo único a una estructura web más clara, mantenible y cercana a un proyecto profesional de DAM.
 
+## Demo online
+
+[Probar Studio Boss en Netlify](https://vitalab-gestor-habitos-compositor.netlify.app/)
+
 ## Concepto
 
 La idea central es sencilla: ayudar a un compositor a mantener el equilibrio entre producción musical, descanso y vida real.
@@ -71,8 +75,8 @@ studio-boss/
 
 ## Cómo usarlo
 
-1. Descargar o clonar el repositorio.
-2. Abrir `index.html` en el navegador.
+1. Abrir la [demo online en Netlify](https://vitalab-gestor-habitos-compositor.netlify.app/) o clonar el repositorio.
+2. Si se usa en local, abrir `index.html` en el navegador.
 3. Registrar el progreso de canciones.
 4. Marcar cada día como cumplido, descansado o incumplido.
 5. Revisar la puntuación semanal y el historial.
@@ -95,7 +99,6 @@ Este proyecto sirve para practicar:
 
 ## Posibles mejoras futuras
 
-- Añadir enlace directo a la demo de Netlify.
 - Añadir capturas de pantalla al README.
 - Añadir exportación/importación de datos.
 - Crear modo edición para personalizar horarios y recompensas.
