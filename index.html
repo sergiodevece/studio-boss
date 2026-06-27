@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎸 Studio Boss</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <h1>🎸 Studio Boss 🎸</h1>
+      <p class="hero-subtitle">Control total del compositor</p>
+      <p class="hero-meta">60 songs · 2 kids · 1 job · no sleep ▓▓░░</p>
+    </header>
+
+    <section class="panel songs-panel" aria-labelledby="songs-title">
+      <div class="panel-heading">
+        <h2 id="songs-title">🎵 Canciones</h2>
+        <span id="songsLabel" class="counter neon">0/60</span>
+      </div>
+
+      <label class="sr-only" for="songsRange">Número de canciones grabadas</label>
+      <input id="songsRange" type="range" min="0" max="60" value="0" />
+
+      <div class="songs-controls">
+        <button id="minusSong" class="btn btn-danger" type="button">- 1</button>
+        <span id="songsPct" class="progress-text">0% completado</span>
+        <button id="plusSong" class="btn btn-success" type="button">+ 1</button>
+      </div>
+
+      <button id="musicBtn" class="music-btn" type="button">🔇 Pulsa para música</button>
+    </section>
+
+    <nav class="tabs" aria-label="Secciones de Studio Boss">
+      <button class="tab-btn active" type="button" data-tab="hoy">Hoy</button>
+      <button class="tab-btn" type="button" data-tab="semana">Semana</button>
+      <button class="tab-btn" type="button" data-tab="historial">Récord</button>
+    </nav>
+
+    <section id="tab-hoy" class="tab-panel active" aria-live="polite"></section>
+    <section id="tab-semana" class="tab-panel" aria-live="polite"></section>
+    <section id="tab-historial" class="tab-panel" aria-live="polite"></section>
+
+    <aside class="panel rules-panel" aria-labelledby="rules-title">
+      <h2 id="rules-title">📋 Reglamento</h2>
+      <ul class="rules-list">
+        <li><strong>Lun · Mar · Mié</strong><span>23:00 → 01:30</span></li>
+        <li><strong>Jue</strong><span>Tarde → 03:00 · 6h max</span></li>
+        <li><strong>Vie · Sáb · Dom</strong><span>Libre — respétalo</span></li>
+      </ul>
+      <div class="score-rules">
+        <p class="positive">✅ Cumple / descansa → +5 pts</p>
+        <p class="negative">❌ Se pasa / graba en libre → -5 pts</p>
+        <p class="reward">≥30 pts → 🍺 una cerveza</p>
+        <p class="reward-strong">≥35 pts → 🍺🍺 dos cervezas</p>
+      </div>
+    </aside>
+  </main>
+</body>
+</html>
