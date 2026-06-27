@@ -2,7 +2,7 @@
 
 **Studio Boss** es un gestor de disciplina creativa para compositores y productores musicales. La app convierte el seguimiento de sesiones de estudio, descanso y progreso musical en una experiencia gamificada con estética arcade/neón.
 
-El proyecto está construido como una aplicación web ligera en un único archivo HTML: `studio-boss-3.html`.
+El proyecto ha sido refactorizado para pasar de una aplicación de archivo único a una estructura web más clara, mantenible y cercana a un proyecto profesional de DAM.
 
 ## Concepto
 
@@ -22,8 +22,9 @@ La app propone un sistema de control semanal donde el usuario registra si ha cum
 - Recompensas semanales según puntuación.
 - Campo de notas para registrar qué se está grabando.
 - Historial semanal con estadísticas acumuladas.
-- Música integrada con alternativa de síntesis 8-bit si falla el audio principal.
+- Música 8-bit generada con Web Audio API.
 - Persistencia local mediante `localStorage`.
+- Estructura separada en HTML, CSS y JavaScript.
 
 ## Sistema de juego
 
@@ -51,19 +52,27 @@ La app incluye una planificación semanal personalizada:
 - LocalStorage
 - Web Audio API
 - Google Fonts
+- Netlify para despliegue online
 
 ## Estructura del proyecto
 
 ```txt
 studio-boss/
 ├── README.md
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── app.js
 └── studio-boss-3.html
 ```
+
+> `studio-boss-3.html` se conserva como versión original/legacy. La entrada principal del proyecto refactorizado es `index.html`.
 
 ## Cómo usarlo
 
 1. Descargar o clonar el repositorio.
-2. Abrir `studio-boss-3.html` en el navegador.
+2. Abrir `index.html` en el navegador.
 3. Registrar el progreso de canciones.
 4. Marcar cada día como cumplido, descansado o incumplido.
 5. Revisar la puntuación semanal y el historial.
@@ -74,23 +83,25 @@ No requiere instalación ni servidor externo.
 
 Este proyecto sirve para practicar:
 
-- Creación de aplicaciones web de archivo único.
+- Separación de responsabilidades entre HTML, CSS y JavaScript.
+- Creación de aplicaciones web con estructura mantenible.
 - Diseño de interfaces con identidad visual fuerte.
 - Manipulación dinámica del DOM con JavaScript.
 - Persistencia de datos en navegador con `localStorage`.
 - Lógica de gamificación aplicada a hábitos reales.
 - Gestión de fechas, semanas y registro histórico.
-- Uso básico de audio en navegador.
+- Uso básico de audio en navegador mediante Web Audio API.
 - Diseño responsive orientado a uso cotidiano.
 
 ## Posibles mejoras futuras
 
-- Separar HTML, CSS y JavaScript en archivos independientes.
+- Añadir enlace directo a la demo de Netlify.
+- Añadir capturas de pantalla al README.
 - Añadir exportación/importación de datos.
 - Crear modo edición para personalizar horarios y recompensas.
 - Añadir estadísticas visuales más completas.
 - Incluir modo oscuro/retro alternativo.
-- Publicar una demo online mediante GitHub Pages o Netlify.
+- Revisar accesibilidad y navegación con teclado.
 
 ## Estado del proyecto
 
